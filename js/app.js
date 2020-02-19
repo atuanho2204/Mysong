@@ -279,6 +279,6 @@ function convertT(x) {
     return ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s);
 }
 
-$("#clear").click(function () {
+$("#clear").click(function(e) {
     $("#keyword").val("");
 })
