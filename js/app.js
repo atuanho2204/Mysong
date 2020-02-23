@@ -1,4 +1,4 @@
-var apiKey = "AIzaSyB96dShjwFgl3zdEzVD9L3uqdCi-s-BMNA";
+var apiKey = "AIzaSyCjZD0-Jb7UxcjdmLMEVL-jmoy7tyCRe_U";
 var arrQueue = [];
 var isPlay = false;
 var player;
@@ -168,7 +168,7 @@ function play(videoID) {
            'suggestedQuality': 'large'});
 
     }else{
-        player = new YT.Player('video', {
+        window.player = new YT.Player('video', {
           height: '390',
           width: '640',
           videoId: videoID,
@@ -278,7 +278,13 @@ function convertT(x) {
     var s = x[2];
     return ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s);
 }
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 $("#clear").click(function(e) {
     $("#keyword").val("");
 })
